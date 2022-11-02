@@ -1,0 +1,37 @@
+"http://http://http://@http://http://?http://#http://" is a valid URL
+source: https://daniel.haxx.se/blog/2022/09/08/http-http-http-http-http-http-http/
+
+`ai` has MX records
+∴drill ai MX
+;; ->>HEADER<<- opcode: QUERY, rcode: NOERROR, id: 63918
+;; flags: qr rd ra ; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 7 
+;; QUESTION SECTION:
+;; ai.	IN	MX
+
+;; ANSWER SECTION:
+ai.	85971	IN	MX	10 mail.offshore.ai.
+
+;; AUTHORITY SECTION:
+ai.	34915	IN	NS	pch.whois.ai.
+ai.	34915	IN	NS	anycastdns2-cz.nic.ai.
+ai.	34915	IN	NS	a.lactld.org.
+ai.	34915	IN	NS	anycastdns1-cz.nic.ai.
+
+;; ADDITIONAL SECTION:
+a.lactld.org.	8623	IN	A	200.0.68.10
+pch.whois.ai.	34915	IN	A	204.61.216.123
+anycastdns1-cz.nic.ai.	34915	IN	A	185.28.194.194
+anycastdns2-cz.nic.ai.	34915	IN	A	185.38.108.108
+a.lactld.org.	8623	IN	AAAA	2801:14:a000::10
+pch.whois.ai.	34915	IN	AAAA	2001:500:14:6123:ad::1
+anycastdns2-cz.nic.ai.	34915	IN	AAAA	2a00:fea0:dead::beef
+
+;; Query time: 5128 msec
+;; SERVER: 172.29.138.102
+;; WHEN: Wed Nov  2 13:56:54 2022
+;; MSG SIZE  rcvd: 316
+
+
+
+
+
