@@ -1,13 +1,28 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \usepackage{cancel}
 \usepackage{amsmath}% http://ctan.org/pkg/amsmath
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{cites.bib}
+
 
 \title{'Mathematical Jokes'}
-\author{Eitan Adler'}
+\date{}
+\author{}
+
+
+\newcommand{\iu}{\mathrm{i}} % roman "i"
 
 \begin{document}
 \maketitle
+\begin{abstract}
+	A collection of math jokes.
+\end{abstract}
 
+\tableofcontents
+\clearpage
 
 \section{Cancellation}
 \subsection{Arithmetic}
@@ -122,6 +137,8 @@
 
 \section{1 = 2}
 
+\subsection{Cancellation}
+
 \begin{equation}
 	\begin{split}
 		b        &= a \\
@@ -136,6 +153,27 @@
 	\end{split}
 \end{equation}
 
+\subsection{Repetition}
+
+\begin{equation}
+	\begin{split}
+		x^2& = \underbrace{x+x+\cdots+x}_{(x\text{ times})} \\
+		\frac{d}{dx}x^2& = \frac{d}{dx}[\underbrace{x+x+\cdots+x}_{(x\text{ times})}] \\
+		2x& = \underbrace{1+1+\cdots+1}_{(x\text{ times})} \\
+		2x& = x \\
+		& \implies \\
+		2& = 1
+	\end{split}
+\end{equation}
+
+\subsection{Imaginary Numbers}
+
+\begin{equation}
+	\begin{split}
+		1 = \sqrt{1} = \sqrt{(-1)\cdot(-1)} = \sqrt{-1}\cdot \sqrt{-1} = \iu \cdot \iu = -1
+	\end{split}
+\end{equation}
+
 \section{Limits}
 
 \begin{equation}
@@ -147,5 +185,7 @@
 	\end{split}
 \end{equation}
 
+\nocite{*}
+\printbibliography[heading=bibintoc]
 
 \end{document}
