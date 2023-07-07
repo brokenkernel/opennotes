@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{cancel}
-\usepackage{amsmath}% http://ctan.org/pkg/amsmath
+\usepackage{amsmath, amssymb}% http://ctan.org/pkg/amsmath
 \usepackage{csquotes}
 \usepackage[backend=biber]{biblatex}
 \addbibresource{cites.bib}
@@ -14,6 +14,7 @@
 
 
 \newcommand{\iu}{\mathrm{i}} % roman "i"
+\newcommand{\justif}[2]{&{#1}&\text{#2}}
 
 \begin{document}
 \maketitle
@@ -139,19 +140,24 @@
 
 \subsection{Cancellation}
 
-\begin{equation}
-	\begin{split}
-		b        &= a \\
-		ab       &= a^2 \\
-		ab - b^2 &= a^2 - b^2 \\
-		b(a - b) &= (a + b)(a - b) \\
-		b\cancel{(a - b)} &= (a + b)\cancel{(a - b)} \\
-		b        &= a + b \\
-		b        &= b + b \\
-		b        &= 2b \\
-		1        &= 2
-	\end{split}
-\end{equation}
+%\begin{equation}
+%%	\begin{split}
+	\begin{subequations}
+	\begin{align}
+		b        &= a  \justif{\quad}{by assumption} \label{subeqn:cancel-1} \\
+		ab       &= a^2 \justif{\quad}{by \ref{subeqn:cancel-1}} \label{subeqn:cancel-2} \\
+		ab - b^2 &= a^2 - b^2 \justif{\quad}{by \ref{subeqn:cancel-1}} \label{subeqn:cancel-3} \\
+		b(a - b) &= (a + b)(a - b) \justif{\quad}{by \ref{subeqn:cancel-1}}  \label{subeqn:cancel-4} \\
+		b\cancel{(a - b)} &= (a + b)\cancel{(a - b)} \justif{\quad}{by cancelation \cite{defn_of_cancel}} \label{subeqn:cancel-5} \\
+		b        &= a + b \justif{\quad}{by \ref{subeqn:cancel-1}} \label{subeqn:cancel-6} \\
+		b        &= b + b \justif{\quad}{by \ref{subeqn:cancel-1}} \label{subeqn:cancel-7} \\
+		b        &= 2b \justif{\quad}{by division} \label{subeqn:cancel-8} \\
+		1        &= 2 \justif{\quad}{by division} \label{subeqn:cancel-9}
+	\end{align}
+	\label{eqn:all-lines}
+\end{subequations}
+%%	\end{split}
+%\end{equation}
 
 \subsection{Repetition}
 
